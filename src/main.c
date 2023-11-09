@@ -815,6 +815,17 @@ int main(int argc, char **argv) {
             //! same directory as StarCharter, the default value should be <../ephemeris-compute-de430/bin/ephem.bin>.
             strcpy(settings_destination->ephemeris_compute_path, key_val);
             continue;
+        } else if (strcmp(key, "ra_line_count") == 0) {
+            //! ra_line_count - The number of RA lines to draw. If set to 24, then one line of RA every hour.
+            CHECK_KEYVALNUM("ra_line_count")
+            settings_destination->ra_line_count = (int) key_val_num;
+            continue;
+        } else if (strcmp(key, "dec_line_count") == 0) {
+            //! dec_line_count - The number of declination lines to draw. If set to 18, then one line of RA every
+            //! 10 degrees
+            CHECK_KEYVALNUM("dec_line_count")
+            settings_destination->dec_line_count = (int) key_val_num;
+            continue;
         } else {
             snprintf(temp_err_string, FNAME_LENGTH, "Bad input file. Unrecognised setting '%s'.", key);
             stch_error(temp_err_string);
