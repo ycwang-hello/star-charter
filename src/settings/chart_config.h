@@ -201,6 +201,12 @@ typedef struct chart_config {
     //! The aspect ratio of the star chart: i.e. the ratio height/width
     double aspect;
 
+    //! The number of RA lines to draw. If set to 24, then one line of RA every hour.
+    int ra_line_count;
+
+    //! The number of declination lines to draw. If set to 18, then one line of RA every 10 degrees
+    int dec_line_count;
+
     //! The maximum number of stars to draw. If this is exceeded, only the brightest stars are shown.
     int maximum_star_count;
 

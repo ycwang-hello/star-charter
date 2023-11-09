@@ -52,6 +52,8 @@ void plot_ra_dec_lines(chart_config *s, line_drawer *ld) {
     int i, j;
     char label[FNAME_LENGTH];
 
+    printf("ra=%d, dec=%d", s->ra_line_count, s->dec_line_count)
+
     // Work out how many lines we are going to draw
     double degrees_per_cm = (s->angular_width * 180 / M_PI) / s->width;
     int ra_line_count = 24;

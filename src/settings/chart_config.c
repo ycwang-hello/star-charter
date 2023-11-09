@@ -83,6 +83,8 @@ void default_config(chart_config *i) {
     i->maximum_star_label_count = 1000;
     i->maximum_dso_count = 500;
     i->maximum_dso_label_count = 100;
+    i->ra_line_count = -1; // decided in raDecLines.c if not specified in the config file
+    i->dec_line_count = -1; // decided in raDecLines.c if not specified in the config file
     i->copyright_gap = 0;
     i->copyright_gap_2 = 0;
     i->dso_cluster_col = (colour) {0.8, 0.8, 0.25};
