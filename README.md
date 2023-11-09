@@ -1,5 +1,10 @@
 # StarCharter
 
+This repository is a fork of [StarCharter](https://github.com/dcf21/star-charter) by Dominic Ford. The code has been modified by Yu-Chen Wang. The changes include:
+- Reintroducing the configuration settings `ra_line_count` and `dec_line_count`. These settings were supported in the older version, but were dropped during an [update](https://github.com/ycwang-hello/star-charter/commit/2466d6cf71949383fcfb5457f9c995335e7f5926).
+
+-----
+
 <img align="right" width="500" src="example_output/orion_mini.png">
 
 `StarCharter` is a command-line tool for producing vector-graphics charts of
@@ -25,6 +30,8 @@ Mac imposes a default memory limit of 2GB, which needs to be increased to build
 
 This code is distributed under the Gnu General Public License. It is (C)
 Dominic Ford 2015 - 2022.
+
+This code is modified by Yu-Chen Wang 2023. Changes are stated above.
 
 ### Set up
 
@@ -183,6 +190,7 @@ The following settings can be included in a `StarCharter` configuration file:
 * `copyright_gap` - Spacing of the copyright text beneath the plot
 * `copyright` - The copyright string to write under the star chart
 * `dec_central` - The declination at the centre of the plot; degrees
+* `dec_line_count` - The number of declination lines to draw. If set to 18, then one line of RA every 10 degrees
 * `draw_ephemeris` - Definitions of ephemerides to draw
 * `dso_cluster_col` - Colour to use when drawing star clusters
 * `dso_galaxy_col` - Colour to use when drawing galaxies
@@ -234,6 +242,7 @@ The following settings can be included in a `StarCharter` configuration file:
 * `projection` - Select projection to use. Set to either flat, peters, gnomonic, sphere or alt_az
 * `ra_central` - The right ascension at the centre of the plot; hours, J2000.0
 * `ra_dec_lines` - Boolean (0 or 1) indicating whether we draw a grid of RA/Dec lines in background of star chart
+* `ra_line_count` - The number of RA lines to draw. If set to 24, then one line of RA every hour.
 * `star_allow_multiple_labels` - Boolean (0 or 1) indicating whether we allow multiple labels next to a single star. If false, we only include the highest-priority label for each object.
 * `star_bayer_labels` - Boolean (0 or 1) indicating whether we label the Bayer numbers of stars
 * `star_catalogue_numbers` - Boolean (0 or 1) indicating whether we label the catalogue numbers of stars
